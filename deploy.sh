@@ -16,7 +16,6 @@ git config --global user.name levelup > /dev/null 2>&1
 git init
 git remote add --fetch origin https://github.com/twlevelup/syd-2018-sem1-jupiter.git
 
-
 # switch into the the gh-pages branch
 if git rev-parse --verify origin/gh-pages > /dev/null 2>&1
 then
