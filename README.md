@@ -3,7 +3,6 @@
 [![CircleCI](https://circleci.com/gh/twlevelup/syd-2018-sem1-jupiter.svg?style=svg)](https://circleci.com/gh/twlevelup/syd-2018-sem1-jupiter)
 
 This git repo contains all the code you need to prototype apps for the Proto Watch.
-
 Start at the master [wiki](https://github.com/twlevelup/watch_edition/wiki), which contains lots of useful documentation.
 
 # Installation
@@ -31,5 +30,3 @@ You can view this app at [https://twlevelup.github.io/syd-2018-sem1-jupiter/](ht
 
 ### Checking the build status
 You can access the CI server and view the status of the build here [Circle CI](https://circleci.com/gh/twlevelup/syd-2018-sem1-jupiter)
-
-
