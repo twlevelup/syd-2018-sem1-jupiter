@@ -16,6 +16,10 @@ class HomePage extends BasePage {
     return compiledTemplate(context);
   }
 
+  leftButtonEvent() {
+    this.navigate('demo');
+  }
+
   rightButtonEvent() {
     this.navigate('contacts');
   }
