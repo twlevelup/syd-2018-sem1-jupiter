@@ -14,4 +14,10 @@ describe('TeamPage', () => {
     });
   });
 
+  it('should contain team members names', () => {
+    const page = new TeamPage();
+    expect(page.template()).toContain("Maddi");
+    expect(page.template()).toContain("Kevin");
+  });
 });
+
