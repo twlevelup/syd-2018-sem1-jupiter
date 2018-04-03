@@ -21,7 +21,7 @@ class HomePage extends BasePage {
   }
 
   rightButtonEvent() {
-    this.navigate('contacts');
+    this.navigate('nextpatient');
   }
 
   topButtonEvent() {

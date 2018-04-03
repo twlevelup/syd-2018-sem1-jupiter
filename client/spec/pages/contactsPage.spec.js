@@ -15,7 +15,7 @@ describe('ContactsPage', () => {
 
     it('should have a template with specific contacts', () => {
       const contacts = [
-        {name: 'hi', phoneNumber: '1234'},
+        { name: 'hi', phoneNumber: '1234' },
       ];
       const props = { contacts }
       const page = new ContactsPage(props);
