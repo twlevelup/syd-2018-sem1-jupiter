@@ -8,7 +8,13 @@ const notifications = [
     type: "push",
     label: "Push",
     defaultValue: "This is a test push notification",
-  }
+  },
+  { type: "carerETA",
+    label: "Carer ETA",
+    defaultValue: "Your carer is 5 minutes away.",
+  }, 
 ];
+
+
 
 module.exports = notifications;
