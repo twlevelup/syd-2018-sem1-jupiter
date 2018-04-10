@@ -1,8 +1,7 @@
 <h1>Next Patient</h1>
-<ul>
-    {{#each contacts}}
-    <p>Name: {{this.name}}</p>
-    <p>Address: {{this.address}}</p>
-    <p>Suburb: {{this.suburb}}</p>
-    {{/each}}
-</ul>
+<div>
+    <p>Name: {{this.contact.name}}</p>
+    <p>Address: {{this.contact.address}}</p>
+    <p>Suburb: {{this.contact.suburb}}</p>
+    <p>Time: {{this.contact.time}}</p>
+</div>
