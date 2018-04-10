@@ -14,9 +14,8 @@ describe('NextPatientPage', () => {
         });
 
         it('should have a template with specific contacts', () => {
-            const contacts = {name: 'Ray White', address: '105 Parramatta Rd', suburb: 'Haberfield', time:'15:00'}
-            const props = { contacts }
-            const page = new NextPatientPage(props);
+            const contact = {name: 'Ray White', address: '105 Parramatta Rd', suburb: 'Haberfield', time:'15:00'};
+            const page = new NextPatientPage(contact);
             expect(page.template()).toContain("<p>Name: Ray White</p>");
             expect(page.template()).toContain("<p>Address: 105 Parramatta Rd</p>");
             expect(page.template()).toContain("<p>Suburb: Haberfield</p>");
