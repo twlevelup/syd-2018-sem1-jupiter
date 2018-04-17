@@ -11,7 +11,7 @@ describe('Carer ETA notifications', () => {
     expect(notifications[2].type).toBe("carerETA");
   });
   it('should have a label with Carer ETA', () => {
-    expect(notifications[2].label).toBe("Carer ETA");  
+    expect(notifications[2].label).toBe("Carer ETA");
   });
   it('should have a default message', () => {
     expect(notifications[2].defaultValue).toBe("Your carer is 5 minutes away.");
