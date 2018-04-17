@@ -10,9 +10,16 @@ describe('HomePage', () => {
   describe('#template', () => {
     it('should have a template', () => {
       const page = new HomePage();
-      expect(page.template()).toContain("<div>Hello, World!</div>");
+      expect(page.template()).toContain("Date:");
     });
   });
+
+  describe('#rightIcon', () => {
+    it('should have right icon', () => {
+      const page = new HomePage();
+      expect(page.template()).toContain('fa-address-book');
+    })
+  })
 
   describe('#leftButtonEvent', () => {
     it('should take the user to the demo page', () => {
