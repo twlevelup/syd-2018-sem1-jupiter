@@ -10,7 +10,7 @@ describe('Patient Home Page', () => {
     describe('#template', () => {
         it('should contain the correct text', () => {
             const page = new PatientHomePage();
-            expect(page.template()).toContain('C');
+            expect(page.template()).toContain('fa-user-md');
         });
     });
 })

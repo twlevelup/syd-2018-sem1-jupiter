@@ -8,6 +8,7 @@ describe('routes', () => {
     expect(routes['team']).toBeDefined();
     expect(routes['404']).toBeDefined();
     expect(routes['patienthome']).toBeDefined();
+    expect(routes['carerinfo']).toBeDefined();
   });
 
 });
