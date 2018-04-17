@@ -4,6 +4,7 @@ const TeamPage = require('./pages/teamPage');
 const FourOhFour = require('./pages/404Page');
 const DemoPage = require('./pages/demoPage');
 const NextPatientPage = require('./pages/nextPatientPage');
+const PatientHomePage = require('./pages/patientHomePage');
 
 module.exports = {
   '/': HomePage,
@@ -11,5 +12,6 @@ module.exports = {
   'team': TeamPage,
   '404': FourOhFour,
   'demo': DemoPage,
-  'nextpatient': NextPatientPage
+  'nextpatient': NextPatientPage,
+  'patienthome': PatientHomePage,
 };
