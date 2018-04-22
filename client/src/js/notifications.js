@@ -1,4 +1,5 @@
 const AlertNotification = require('./notifications/AlertNotification');
+const CarerNotification = require('./notifications/CarerNotification');
 
 const notifications = [
   {
@@ -15,7 +16,8 @@ const notifications = [
   {
     type: "carerETA",
     label: "Carer ETA",
-    defaultValue: "Your carer is 5 minutes away.",
+    defaultValue: "Your carer is 5 minutes away. Press 'right' button for more info.",
+    view: CarerNotification,
   },
 ];
 
