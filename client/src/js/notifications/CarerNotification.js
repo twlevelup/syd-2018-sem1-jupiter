@@ -7,7 +7,7 @@ const mockData = require("../../storage/my_data.json");
 module.exports = class CarerNotification extends BaseNotification {
   template() {
     const context = {
-      name: mockData.data[0].name,
+      name: mockData.carers[0].name,
     };
     return compiledTemplate(context);
   }
