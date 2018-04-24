@@ -28,5 +28,26 @@ describe('NextPatientPage', () => {
             expect(page.template()).toContain("new");
         });
     });
-
+    
+	describe('#homeIcon', () => {
+    	it('should have a home icon', () => {
+		const page = new NextPatientPage();
+		expect(page.template()).toContain('fa-home');
+    })
+  })
+  
+  
+  describe('#topButtonEvent', () => {
+    it('return to home screen', () => {
+	    const props = {
+		    navigate: () => { },
+	    }
+	    const page = new NextPatientPage();
+	    spyOn(page, 'navigate');
+	    
+	    page.topButtonEvent();
+	    expect(page.navigate).toEqual('home');
+    });
+  });
+    
 });
