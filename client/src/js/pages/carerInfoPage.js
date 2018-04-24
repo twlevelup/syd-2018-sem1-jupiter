@@ -5,11 +5,14 @@ class CarerInfoPage extends BasePage {
 
     constructor(props = {}) {
         super(props);
-        this.contact = { name: 'John', service: 'Cleaning up, Feeding, Body check', time: '15:00' }
+        this.contact = { name: 'John', service: 'Cleaning up, Body check', time: '15:00' }
     }
 
     template() {
-        return CarerInfoPageTemplate();
+        const context = {
+            contact: this.contact,
+        };
+        return CarerInfoPageTemplate(context);
     }
 }
 
