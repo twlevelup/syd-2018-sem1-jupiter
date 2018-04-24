@@ -1,7 +1,6 @@
 const BasePage = require('watch-framework').BasePage;
 const compiledTemplate = require('../../templates/nextPatientPage.hbs');
 
-
 class NextPatientPage extends BasePage {
 
     constructor(props = {}) {
