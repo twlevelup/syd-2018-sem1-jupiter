@@ -11,4 +11,9 @@ module.exports = class CarerNotification extends BaseNotification {
     };
     return compiledTemplate(context);
   }
+
+  rightButtonEvent() {
+    NotificationHub.hide();
+    this.navigate('carerinfo');
+  }
 };

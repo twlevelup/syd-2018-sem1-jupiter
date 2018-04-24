@@ -9,4 +9,23 @@ describe("CarerNotification", () => {
       expect(notification.template()).toContain("is 20 minutes away. Press 'right' button for more info.");
     });
   });
+
+  describe("#rightButtonEvent", () => {
+    it("should navigate to carerinfo", () => {
+      const props = {
+        navigate: jest.fn(),
+      };
+      const notification = new CarerNotification(props);
+      notification.rightButtonEvent();
+      expect(props.navigate).toHaveBeenCalledWith('carerinfo');
+    });
+    it("should hide notification after navigation", () => {
+      const props = {
+        navigate: jest.fn(),
+      };
+      const notification = new CarerNotification(props);
+      notification.rightButtonEvent();
+      expect(hideSpy).toHaveBeenCalled();
+    });
+  });
 });
