@@ -15,7 +15,7 @@ describe('Carer ETA notifications', () => {
     expect(notifications[0].label).toBe("Carer ETA");
   });
   it('should have a placeholder value with generic 20 min away message', () => {
-    expect(notifications[0].defaultValue).toBe("Your carer is 20 minutes away. Press 'right' button for more info.");
+    expect(notifications[0].defaultValue).toBe("Your carer is 20 minutes away. Press right button for more info.");
   });
   it('should have a CarerNotification view', () => {
     expect(notifications[0].view).toBe(CarerNotification);

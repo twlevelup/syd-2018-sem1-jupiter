@@ -33,11 +33,27 @@
  text-align: left;
 }
 
+#notification-form-message {
+  resize: none;
+}
+
 .alert-time {
   color: red;
 }
 
 .highlight {
   color: lightgreen;
+}
+
+.notif-top {
+  font-size: 110%;
+  margin-top: 5px;
+}
+
+.detail {
+  text-align: right;
+  font-size: 90%;
+  width: 60%;
+  float: right;
 }
 
