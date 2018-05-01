@@ -4,9 +4,9 @@ const hideSpy = jest.spyOn(NotificationHub, 'hide');
 
 describe("CarerNotification", () => {
   describe("#template", () => {
-    it("should have a template stating carer is 20min away and option for more info", () => {
+    it("should have a template stating carer is 20min away", () => {
       const notification = new CarerNotification();
-      expect(notification.template()).toContain("is 20 minutes away. Press 'right' button for more info.");
+      expect(notification.template()).toContain("20 minutes");
     });
   });
 
