@@ -5,7 +5,7 @@ class CarerInfoPage extends BasePage {
 
     constructor(props = {}) {
         super(props);
-        this.contact = { name: 'John', service: 'Cleaning up, Body check', time: '15:00' }
+        this.contact = { name: 'John', service: 'Cleaning up, feeding', time: '15:00' }
     }
 
     template() {

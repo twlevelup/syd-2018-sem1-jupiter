@@ -34,3 +34,6 @@ class HomePage extends BasePage {
 }
 
 module.exports = HomePage;
+
+// now I need to connect notification page on homepage to carerHomepage or patient homepage????
+// CSS: add shakey shakey notification
