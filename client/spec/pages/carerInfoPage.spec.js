@@ -19,5 +19,11 @@ describe('Carer Page', () => {
             const page = new CarerInfoPage();
             expect(page.template()).toContain('Time of appointment');
         });
+        
+        it('should contain readiness query', () => {
+	        const page = new CarerInfoPage();
+	        expect(page.template()).toContain('Are you ready for this appointment?');
+        });
+        
     });
 })
