@@ -11,7 +11,7 @@ class PatientFeedbackPage extends BasePage {
 
     template() {
         const context = {
-            message: this.feedback,
+            feedback: this.feedback,
         };
         return PatientFeedbackPageTemplate(context);
     }
