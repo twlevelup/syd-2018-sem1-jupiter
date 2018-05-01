@@ -13,6 +13,10 @@ class PatientHomePage extends BasePage {
         return patientHomePageTemplate(context);
     }
 
+    leftButtonEvent() {
+        this.navigate('emergencycontact');
+    }
+
     rightButtonEvent() {
         this.navigate('carerinfo');
     }

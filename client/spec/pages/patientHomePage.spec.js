@@ -13,4 +13,17 @@ describe('Patient Home Page', () => {
             expect(page.template()).toContain('fa-user-md');
         });
     });
+
+    describe('#leftButtonEvent', () => {
+        it('goes to emergency contact page', () => {
+            const props = {
+                navigate: () => { },
+            };
+            const page = new PatientHomePage(props);
+            spyOn(page, 'navigate');
+
+            page.leftButtonEvent();
+            expect(page.navigate).toHaveBeenCalledWith('emergencycontact');
+        });
+    });
 })
