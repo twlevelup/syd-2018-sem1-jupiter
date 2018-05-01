@@ -41,13 +41,19 @@ describe('NextPatientPage', () => {
     it('return to home screen', () => {
 	    const props = {
 		    navigate: () => { },
-	    }
-	    const page = new NextPatientPage();
+	    };
+	    const page = new NextPatientPage(props);
 	    spyOn(page, 'navigate');
 	    
 	    page.topButtonEvent();
-	    expect(page.navigate).toEqual('home');
+	    expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
+  
+  
+   
+  
+  
+  
     
 });

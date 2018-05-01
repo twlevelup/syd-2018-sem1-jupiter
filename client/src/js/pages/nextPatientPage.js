@@ -17,6 +17,10 @@ class NextPatientPage extends BasePage {
         };
         return compiledTemplate(context);
     }
+    
+    topButtonEvent() {
+	    this.navigate('/');
+    }
 
 }
 
