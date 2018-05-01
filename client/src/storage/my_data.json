@@ -18,6 +18,13 @@
       "suburb": "Camperdown",
       "time": "16:00",
       "new": false
+    },
+    {
+      "name": "Chris Pratt",
+      "address": "234 Mars Rd",
+      "suburb": "Sydney",
+      "time": "17:00",
+      "new": true
     }
   ]
 }
