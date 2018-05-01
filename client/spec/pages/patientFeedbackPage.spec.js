@@ -22,7 +22,7 @@ describe('The Patient Feedback Page', () => {
             spyOn(page, 'navigate');
             // What is the previous page? (Take a reference of emergencyContactPage)
             page.topButtonEvent();
-            expect(page.navigate).toHaveBeenCalledWith('something_here');
+            expect(page.navigate).toHaveBeenCalledWith('patienthome');
         });
     });
 });

@@ -17,7 +17,7 @@ class PatientFeedbackPage extends BasePage {
     }
 
     topButtonEvent() {
-        this.navigate('something_here');
+        this.navigate('patienthome');
     }
 }
 
