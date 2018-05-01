@@ -5,7 +5,6 @@ class EmergencyContactPage extends BasePage {
 
     constructor(props = {}) {
         super(props);
-        // this.contact = { name: 'John', service: 'Cleaning up, feeding', time: '15:00' }
         this.message = 'You have notified the emergency contact.'
     }
 

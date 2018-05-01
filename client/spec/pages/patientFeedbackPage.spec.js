@@ -20,7 +20,6 @@ describe('The Patient Feedback Page', () => {
             };
             const page = new PatientFeedbackPage(props);
             spyOn(page, 'navigate');
-            // What is the previous page? (Take a reference of emergencyContactPage)
             page.topButtonEvent();
             expect(page.navigate).toHaveBeenCalledWith('patienthome');
         });

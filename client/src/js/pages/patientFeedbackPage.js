@@ -6,7 +6,7 @@ class PatientFeedbackPage extends BasePage {
     constructor(props = {}) {
         super(props);
         // this.contact = { name: 'John', service: 'Cleaning up, feeding', time: '15:00' }
-        this.feedback = 'how are you feeling today?'
+        this.feedback = 'How are you feeling today?'
     }
 
     template() {
