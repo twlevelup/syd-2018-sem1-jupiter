@@ -5,9 +5,10 @@ const mockData = require('../../storage/my_data.json');
 
 class NextPatientPage extends BasePage {
 
-    constructor(props = {}) {
+    constructor(props = {}, contact = null) {
         super(props);
-        this.contact = mockData.patients[0];
+        const rand = Math.floor(Math.random() * mockData.patients.length);
+        contact ? this.contact = contact : this.contact = mockData.patients[rand];
     }
 
     template() {

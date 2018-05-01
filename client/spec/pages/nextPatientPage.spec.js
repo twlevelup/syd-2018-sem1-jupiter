@@ -16,7 +16,7 @@ describe('NextPatientPage', () => {
         });
 
         it('should have a template with specific contacts', () => {
-            const page = new NextPatientPage(contact);
+            const page = new NextPatientPage({}, contact);
             expect(page.template()).toContain("<p>Name: Ray White</p>");
             expect(page.template()).toContain("<p>Address: 105 Parramatta Rd</p>");
             expect(page.template()).toContain("<p>Suburb: Haberfield</p>");
@@ -24,7 +24,7 @@ describe('NextPatientPage', () => {
         });
 
         it('should indicate new patient', () => {
-            const page = new NextPatientPage(contact);
+            const page = new NextPatientPage({}, contact);
             expect(page.template()).toContain("new");
         });
     });
