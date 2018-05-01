@@ -8,7 +8,7 @@ describe('The Patient Feedback Page', () => {
             expect(page.template()).toContain('How are you feeling today?');
         });
         it('should contain a homepage icon', () => {
-            const page = new EmergencyContactPage();
+            const page = new PatientFeedbackPage();
             expect(page.template()).toContain('homeIcon fas fa-home fa-2x');
         });
     });
@@ -22,7 +22,7 @@ describe('The Patient Feedback Page', () => {
             spyOn(page, 'navigate');
             // What is the previous page? (Take a reference of emergencyContactPage)
             page.topButtonEvent();
-            expect(page.navigate).toHaveBeenCalledWith('@@@@@@@@@@@@@@@@@@@@@@@');
+            expect(page.navigate).toHaveBeenCalledWith('something_here');
         });
     });
 });
