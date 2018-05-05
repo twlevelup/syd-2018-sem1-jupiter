@@ -33,6 +33,15 @@ p {
 	top:96px;
 }
 
+.leftIconText {
+	position: absolute;
+	left: -11px;
+	top: 131px;
+	width: 30%;
+	font-size: 12px;
+	text-align: left;
+}
+
 .status {
     background-color: pink;
     text-transform: uppercase;
@@ -52,7 +61,7 @@ p {
 
 @keyframes drive {
 	0% {left: 0}
-	100% {left: 100px}
-} 
+	100% {left: 95px}
+}
 
 
