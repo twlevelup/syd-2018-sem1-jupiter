@@ -5,7 +5,7 @@ const NotificationForm = require('./NotificationForm');
 const NotificationHub = require('./NotificationHub');
 
 module.exports = class App {
-  constructor(routes, notifications) {
+  constructor(routes, notifications, storage) {
     this.navigate = this.navigate.bind(this);
     this.navigateToLocation = this.navigateToLocation.bind(this);
     this.render = this.render.bind(this);
@@ -14,6 +14,7 @@ module.exports = class App {
     this.routes = routes;
     this.notificationForm = new NotificationForm(notifications, this.render);
 
+    this.localStorage = storage;
     this.watchFace = document.getElementById("watch-face");
     this.leftButton = document.getElementById("button-left");
     this.rightButton = document.getElementById("button-right");
@@ -71,6 +72,7 @@ module.exports = class App {
       ...props,
       navigate: this.navigate,
       watchFace: this.watchFace,
+      localStorage: this.localStorage,
     })
 
     this.setupEventListeners(view);

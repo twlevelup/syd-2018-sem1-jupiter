@@ -1,25 +1,32 @@
 const BasePage = require('watch-framework').BasePage;
 const compiledTemplate = require('../../templates/nextPatientPage.hbs');
 
-const mockData = require('../../storage/my_data.json');
 
 class NextPatientPage extends BasePage {
 
-    constructor(props = {}, contact = null) {
+    constructor(props) {
         super(props);
-        const rand = Math.floor(Math.random() * mockData.patients.length);
-        contact ? this.contact = contact : this.contact = mockData.patients[rand];
+        this.patientData = {
+            name: this.localStorage.getItem('patientName'),
+            address: this.localStorage.getItem('patientAddress'),
+            suburb: this.localStorage.getItem('patientSuburb'),
+            time: this.localStorage.getItem('patientTime'),
+        };
+        this.contact = this.patientData;
+        this.localStorage.getItem('patientNew') === "true" ? this.new = true : this.new = false;
     }
 
     template() {
         const context = {
             contact: this.contact,
+            new: this.new,
         };
         return compiledTemplate(context);
     }
     
     topButtonEvent() {
-	    this.navigate('/');
+        this.localStorage.setItem('patientNew', false);
+        this.navigate('/');
     }
 
 }
