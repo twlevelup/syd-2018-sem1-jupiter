@@ -11,7 +11,7 @@ class HomePage extends BasePage {
     super(props);
 
     this.leftButton = document.getElementById("button-left");
-    this.holdTime = 1500;
+    this.holdTime = 1000;
     this.leftButtonDown = 0;
 
     this.leftButton.addEventListener("mousedown", (e) => {
