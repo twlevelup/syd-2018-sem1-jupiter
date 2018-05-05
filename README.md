@@ -30,3 +30,4 @@ You can view this app at [https://twlevelup.github.io/syd-2018-sem1-jupiter/](ht
 
 ### Checking the build status
 You can access the CI server and view the status of the build here [Circle CI](https://circleci.com/gh/twlevelup/syd-2018-sem1-jupiter)
+
