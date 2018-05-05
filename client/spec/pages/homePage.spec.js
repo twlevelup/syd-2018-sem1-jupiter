@@ -72,7 +72,7 @@ describe('HomePage', () => {
     it('should have a hold time of 1000ms', () => {
       const page = new HomePage();
 
-      expect(page.holdTime).toEqual(1500);
+      expect(page.holdTime).toEqual(1000);
     });
     it('should have a an initial leftButtonDown value of 0', () => {
       const page = new HomePage();
