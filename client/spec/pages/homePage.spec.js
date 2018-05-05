@@ -3,7 +3,7 @@ const HomePage = require('../../src/js/pages/homePage');
 describe('HomePage', () => {
   let watchFace;
   beforeEach(() => {
-    document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
+    document.body.innerHTML = `<div id="button-left" /><div id='watch-face' style='height: 100px; width: 100px;'></div>`;
     watchFace = document.getElementById('watch-face');
   });
 
@@ -20,20 +20,6 @@ describe('HomePage', () => {
       expect(page.template()).toContain('fa-address-book');
     })
   })
-
-  describe('#leftButtonEvent', () => {
-    it('should take the user to the demo page', () => {
-      const props = {
-        navigate: () => { },
-      };
-
-      const page = new HomePage(props);
-      spyOn(page, 'navigate');
-
-      page.leftButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('demo');
-    });
-  });
 
   describe('#rightButtonEvent', () => {
     it('goes to nextpatient page', () => {
@@ -67,6 +53,31 @@ describe('HomePage', () => {
       page.topButtonEvent();
 
       expect(watchFace.scrollTop).toEqual(-40);
+    });
+  });
+
+  describe('#emergencyIcon', () => {
+    it('should have emergency icon', () => {
+      const page = new HomePage();
+      expect(page.template()).toContain('fa-ambulance');
+    })
+  })
+
+  describe('long press event', () => {
+    it('should get the left button', () => {
+      const page = new HomePage();
+
+      expect(page.leftButton).toEqual(document.body.firstChild);
+    });
+    it('should have a hold time of 1000ms', () => {
+      const page = new HomePage();
+
+      expect(page.holdTime).toEqual(1000);
+    });
+    it('should have a an initial leftButtonDown value of 0', () => {
+      const page = new HomePage();
+
+      expect(page.leftButtonDown).toEqual(0);
     });
   });
 });

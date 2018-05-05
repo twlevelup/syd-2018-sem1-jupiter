@@ -7,6 +7,24 @@ const time = new Date(Date.now()).toLocaleString().split(",")[1];
 const compiledTemplate = require("../../templates/homePage.hbs");
 
 class HomePage extends BasePage {
+  constructor(props) {
+    super(props);
+
+    this.leftButton = document.getElementById("button-left");
+    this.holdTime = 1000;
+    this.leftButtonDown = 0;
+
+    this.leftButton.addEventListener("mousedown", (e) => {
+      this.leftButtonDown = e.timeStamp;
+    });
+    this.leftButton.addEventListener("mouseup", (e) => {
+      if (e.timeStamp - this.leftButtonDown > this.holdTime) {
+        this.navigate('emergencycontact');
+      }
+    });
+  }
+
+
   template() {
     const context = {
       date: date,
@@ -14,10 +32,6 @@ class HomePage extends BasePage {
       logo: logo,
     };
     return compiledTemplate(context);
-  }
-
-  leftButtonEvent() {
-    this.navigate('demo');
   }
 
   rightButtonEvent() {
