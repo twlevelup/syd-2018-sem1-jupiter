@@ -24,4 +24,29 @@ describe('The Patient Feedback Page', () => {
             expect(page.navigate).toHaveBeenCalledWith('patienthome');
         });
     });
+    
+    describe('#leftButtonEvent', () => {
+        it('goes to Feedback Confirmation', () => {
+            const props = {
+                navigate: () => { },
+            };
+            const page = new PatientFeedbackPage(props);
+            spyOn(page, 'navigate');
+            page.leftButtonEvent();
+            expect(page.navigate).toHaveBeenCalledWith('patientfeedbackconfirmation');
+        });
+    });
+
+	describe('#rightButtonEvent', () => {
+        it('goes to Feedback Confirmation', () => {
+            const props = {
+                navigate: () => { },
+            };
+            const page = new PatientFeedbackPage(props);
+            spyOn(page, 'navigate');
+            page.rightButtonEvent();
+            expect(page.navigate).toHaveBeenCalledWith('patientfeedbackconfirmation');
+        });
+    });
+    
 });

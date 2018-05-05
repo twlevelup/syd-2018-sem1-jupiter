@@ -33,6 +33,13 @@ class PatientHomePage extends BasePage {
     rightButtonEvent() {
         this.navigate('carerinfo');
     }
+    
+    bottomButtonEvent() {
+        this.navigate('patientfeedback');
+    }
+   
+    
+    
 }
 
 module.exports = PatientHomePage;

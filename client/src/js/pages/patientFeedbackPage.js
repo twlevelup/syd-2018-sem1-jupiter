@@ -19,6 +19,15 @@ class PatientFeedbackPage extends BasePage {
     topButtonEvent() {
         this.navigate('patienthome');
     }
+    
+    leftButtonEvent() {
+        this.navigate('patientfeedbackconfirmation');
+    }
+
+	rightButtonEvent() {
+        this.navigate('patientfeedbackconfirmation');
+    }
+
 }
 
 module.exports = PatientFeedbackPage;

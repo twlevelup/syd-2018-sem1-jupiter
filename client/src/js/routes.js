@@ -8,6 +8,8 @@ const PatientHomePage = require('./pages/patientHomePage');
 const CarerInfoPage = require('./pages/carerInfoPage');
 const EmergencyContactPage = require('./pages/emergencyContactPage');
 const PatientReadyPage = require('./pages/patientReadyPage');
+const PatientFeedbackPage = require('./pages/patientFeedbackPage');
+const PatientFeedbackConfirmationPage = require('./pages/patientFeedbackConfirmationPage');
 
 module.exports = {
   '/': HomePage,
@@ -19,5 +21,7 @@ module.exports = {
   'patienthome': PatientHomePage,
   'carerinfo': CarerInfoPage,
   'emergencycontact': EmergencyContactPage,
-  'patientreadypage': PatientReadyPage
+  'patientreadypage': PatientReadyPage,
+  'patientfeedback': PatientFeedbackPage,
+  'patientfeedbackconfirmation': PatientFeedbackConfirmationPage
 };

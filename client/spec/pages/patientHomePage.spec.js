@@ -33,6 +33,21 @@ describe('Patient Home Page', () => {
         });
     });
 
+	describe('#bottomButtonEvent', () => {
+        it('goes to Patient Feedback page', () => {
+            const props = {
+                navigate: () => { },
+            };
+            const page = new PatientHomePage(props);
+            spyOn(page, 'navigate');
+
+            page.bottomButtonEvent();
+            expect(page.navigate).toHaveBeenCalledWith('patientfeedback');
+        });
+    });
+
+
+
     describe('long press event', () => {
         it('should get the left button', () => {
             const page = new PatientHomePage();
