@@ -5,66 +5,67 @@ const webpack = require('webpack');
 module.exports = {
   cache: true,
   entry: {
-    main: './client/src/main.js',
+    main: "./client/src/main.js"
   },
   output: {
-    path: path.join(__dirname, 'public/'),
-    filename: '[name].js',
-    chunkFilename: '[chunkhash].js',
+    path: path.join(__dirname, "public/"),
+    filename: "[name].js",
+    chunkFilename: "[chunkhash].js"
   },
-  devtool: '#inline-source-map',
+  devtool: "#inline-source-map",
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/,
-        loaders: [
-          'babel-loader',
-          'eslint-loader',
-        ],
+        loaders: ["babel-loader", "eslint-loader"]
       },
       {
         test: /\.scss$/,
-        loaders: [
-          'style-loader',
-          'css-loader',
-          'sass-loader?sourceMap',
-        ],
+        loaders: ["style-loader", "css-loader", "sass-loader?sourceMap"]
       },
       {
         test: /\.hbs/,
-        loader: 'handlebars-template-loader',
+        loader: "handlebars-template-loader"
       },
       {
         test: /\.ttf/,
-        loader: 'file-loader?name=[name].[ext]',
+        loader: "file-loader?name=[name].[ext]"
       },
       {
         test: /\.png$/,
-        loader: 'file-loader',
+        loader: "file-loader"
       },
       {
         test: /\.mp3$/,
-        loader: 'file-loader',
+        loader: "file-loader"
+      },
+      {
+        test: /\.ico$/,
+        loader: "file-loader"
+      },
+      {
+        test: /\.svg$/,
+        loader: "file-loader"
       }
-    ],
+    ]
   },
   watchOptions: {
-    poll: true,
+    poll: true
   },
-  target: 'web',
+  target: "web",
   devServer: {
-    stats: 'minimal',
+    stats: "minimal"
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './framework/templates/watch.hbs',
+      template: "./framework/templates/watch.hbs"
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
       compress: {
-        warnings: false,
-      },
-    }),
-  ],
+        warnings: false
+      }
+    })
+  ]
 };
