@@ -8,6 +8,11 @@ describe("CarerNotification", () => {
       const notification = new CarerNotification();
       expect(notification.template()).toContain("20 minutes");
     });
+    it("should have an audio notification", () => {
+      const notification = new CarerNotification();
+      expect(notification.template()).toContain("audio autoplay");
+      expect(notification.template()).toContain("/client/src/sounds/definite.mp3");
+    });
   });
 
   describe("#rightButtonEvent", () => {
