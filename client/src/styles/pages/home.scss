@@ -41,3 +41,18 @@ p {
     font-size: 16px;
 }
 
+.ambulance-start {
+	display: inline-block;
+	position:absolute;
+	left: 0;
+	top: 180px;
+	animation: drive 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes drive {
+	0% {left: 0}
+	100% {left: 100px}
+} 
+
+
