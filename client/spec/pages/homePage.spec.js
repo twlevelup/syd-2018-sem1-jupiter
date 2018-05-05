@@ -14,10 +14,10 @@ describe('HomePage', () => {
     });
   });
 
-  describe('#rightIcon', () => {
-    it('should have right icon', () => {
+  describe('#rightIcon2', () => {
+    it('should have right icon2', () => {
       const page = new HomePage();
-      expect(page.template()).toContain('fa-address-book');
+      expect(page.template()).toContain('<img class="rightIcon2" src="../images/patient.png" >');
     })
   })
 
