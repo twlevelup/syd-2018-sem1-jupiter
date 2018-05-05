@@ -11,7 +11,7 @@ describe("CarerNotification", () => {
     it("should have an audio notification", () => {
       const notification = new CarerNotification();
       expect(notification.template()).toContain("audio autoplay");
-      expect(notification.template()).toContain("/client/src/sounds/definite.mp3");
+      expect(notification.template()).toContain("/public/sounds/definite.mp3");
     });
   });
 
