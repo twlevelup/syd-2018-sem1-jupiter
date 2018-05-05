@@ -5,8 +5,8 @@ class CarerInfoPage extends BasePage {
 
     constructor(props = {}) {
         super(props);
-		this.question = 'Are you ready for this appointment?';
-        this.contact = { name: 'John', service: 'Cleaning up, feeding', time: '15:00' };
+		this.question = 'Are you ready?';
+        this.contact = { name: 'John', service: 'Cleaning, Cooking', time: '15:00' };
     }
 
     template() {
@@ -15,6 +15,18 @@ class CarerInfoPage extends BasePage {
             question: this.question,
         };
         return CarerInfoPageTemplate(context);
+    }
+    
+    topButtonEvent() {
+	    this.navigate('/');
+    }
+
+	leftButtonEvent() {
+	    this.navigate('patientreadypage');
+    }
+    
+    rightButtonEvent() {
+	    this.navigate('patientreadypage');
     }
 }
 

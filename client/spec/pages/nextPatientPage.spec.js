@@ -49,11 +49,4 @@ describe('NextPatientPage', () => {
 	    expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
-  
-  
-   
-  
-  
-  
-    
 });
