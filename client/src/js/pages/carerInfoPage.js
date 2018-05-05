@@ -18,7 +18,7 @@ class CarerInfoPage extends BasePage {
     }
     
     topButtonEvent() {
-	    this.navigate('/');
+	    this.navigate('patienthome');
     }
 
 	leftButtonEvent() {

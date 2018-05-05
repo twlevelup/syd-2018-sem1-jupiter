@@ -36,7 +36,7 @@ describe('Carer Page', () => {
 		    spyOn(page, 'navigate');
 		    
 		    page.topButtonEvent();
-		    expect(page.navigate).toHaveBeenCalledWith('/');
+		    expect(page.navigate).toHaveBeenCalledWith('patienthome');
 	    });
     });
     
