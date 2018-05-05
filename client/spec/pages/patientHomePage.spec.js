@@ -13,6 +13,13 @@ describe('Patient Home Page', () => {
         });
     });
 
+    describe('#emergencyIcon', () => {
+        it('should have emergency icon', () => {
+            const page = new PatientHomePage();
+            expect(page.template()).toContain('fa-ambulance');
+        })
+    })
+
     describe('#rightButtonEvent', () => {
         it('goes to carer info page', () => {
             const props = {
@@ -43,4 +50,5 @@ describe('Patient Home Page', () => {
             expect(page.leftButtonDown).toEqual(0);
         });
     });
+
 })
