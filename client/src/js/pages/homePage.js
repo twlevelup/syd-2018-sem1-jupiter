@@ -30,7 +30,7 @@ class HomePage extends BasePage {
     });
     this.leftButton.addEventListener("mouseup", (e) => {
       if (e.timeStamp - this.leftButtonDown > this.holdTime) {
-        this.navigate('emergencycontact');
+        this.navigate('emergencycontactcarer');
       }
     });
   }
@@ -59,6 +59,3 @@ class HomePage extends BasePage {
 }
 
 module.exports = HomePage;
-
-// now I need to connect notification page on homepage to carerHomepage or patient homepage????
-// CSS: add shakey shakey notification

@@ -42,7 +42,7 @@ module.exports = {
       },
       {
         test: /\.ico$/,
-        loader: "file-loader"
+        loader: 'file-loader?name=[name].[ext]'  // retain original file name
       },
       {
         test: /\.svg$/,
