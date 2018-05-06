@@ -59,7 +59,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./framework/templates/watch.hbs"
+      template: "./framework/templates/watch.hbs",
+      favicon: 'favicon.ico'
     }),
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true,
